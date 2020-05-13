@@ -74,7 +74,7 @@ public class OfferGetTest17
             //左右子树必须全部相同才可以返回true，用“与”
             return isSubTree(node1.left , node2.left) && isSubTree(node1.right , node2.right);
         }
-        else
+        else//这里else可以不加，因为前面如果满足则return，不会执行下面的return；不满足一定会return这里
         {
             //当有一个结点值不同，说明当前子结构不满足，返回false
             return false;
