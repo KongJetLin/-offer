@@ -21,7 +21,7 @@ public class OfferGetTest64
         PriorityQueue<Integer> queue = new PriorityQueue<>(new Comparator<Integer>()
         {
             /*
-            这里，如果num1>num2，返回-1，说明定义在队列中 num1的小于num2，即定义优先队列中，比较的时候 较大数小于比较小的数，
+            这里，如果数值上num1>num2，compare返回-1，说明定义在队列中 num1的小于num2，即定义优先队列中，比较的时候 较大数小于比较小的数，
             即数 “实际大小” 与 “比较大小” 相反。
             由于最小堆实现的优先队列会将最小的元素放在队首，即数越小在优先队列中优先级越高。（这里的大小指的是比较大小）
             那么“比较大小”中最小的数就会被放到队首，而这个数“实际大小”则是最大的！
@@ -29,7 +29,7 @@ public class OfferGetTest64
             技巧：
             1）其实这种做题的时候，如果 num2-num1 不对，换成 num1-num2 就肯定没错。
             2）使用java最小堆实现的优先队列，如果是求最小值可以直接使用；
-                如果是求最大值，实现 Comparator，使得 “实际大小” 与 “比较大小” 相反。
+                如果是求最大值，实现 Comparator，使得 “实际大小” 与 “比较大小” 相反。即返回 num2-num1就是最大堆！
              */
             @Override
             public int compare(Integer num1, Integer num2)
