@@ -1,6 +1,0 @@
-package com.lkj.problem307;
-
-public interface Merger<E>
-{
-    E merge(E a, E b);
-}
