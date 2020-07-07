@@ -1,6 +1,6 @@
 package com.lkj.problem65;
 
-/** 深度优先遍历+剪枝完成
+/** 深度优先遍历+剪枝完成 （对比66题）
 参考剑指offer的解析：https://leetcode-cn.com/problems/ju-zhen-zhong-de-lu-jing-lcof/solution/mian-shi-ti-12-ju-zhen-zhong-de-lu-jing-shen-du-yo/
  */
 public class OfferGetTest65
@@ -39,6 +39,7 @@ public class OfferGetTest65
             return true;
 
         //为了避免当前元素被重复查找，进入下一轮的查找之前，将当前元素设置为“/”
+        //这里也可以设置一个 Boolean型的二维数组，俩表示这个位置已经被访问过！
         char temp = board[row][col];
         board[row][col] = '/';
         //当前结点符号，查找当前结点下的其他路径！
